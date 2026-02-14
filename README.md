@@ -1,7 +1,14 @@
-# GlassDrop
+<p align="center">
+  <img src="app/assets/GlassDrop.png" alt="GlassDrop Logo" width="160" />
+</p>
 
-GlassDrop is a GTK4/libadwaita desktop app for downloading media with `yt-dlp`.
-It supports Linux desktop workflows with Python run mode, Flatpak packaging, and AppImage distribution.
+<h1 align="center">GlassDrop</h1>
+
+<p align="center">
+  GTK4/libadwaita desktop downloader powered by <code>yt-dlp</code>.
+  <br />
+  Available as Python app, Flatpak, and AppImage.
+</p>
 
 ## Features
 - URL paste + auto metadata fetch
