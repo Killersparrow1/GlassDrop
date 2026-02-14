@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>com.milas.GlassDrop</id>
+  <name>GlassDrop</name>
+  <summary>GTK frontend for yt-dlp downloads</summary>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>MIT</project_license>
+  <launchable type="desktop-id">com.milas.GlassDrop.desktop</launchable>
+  <description>
+    <p>GlassDrop is a GTK4/libadwaita desktop app that fetches media metadata and downloads videos using yt-dlp.</p>
+  </description>
+  <developer id="com.milas">
+    <name>Milas</name>
+  </developer>
+  <url type="homepage">https://github.com/Killersparrow1/GlassDrop</url>
+  <url type="bugtracker">https://github.com/Killersparrow1/GlassDrop/issues</url>
+  <content_rating type="oars-1.1"/>
+  <releases>
+    <release version="0.1.0" date="2026-02-14"/>
+  </releases>
+</component>

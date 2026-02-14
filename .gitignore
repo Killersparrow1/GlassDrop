@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+
+# Local build artifacts
+.flatpak-builder/
+build-dir/
+squashfs-root/
+dist/GlassDrop.AppDir/
+
+# Local outputs
+*.flatpak
+*.AppImage
+
+# Cursor source-only assets
+app/assets/cursors/WhiteSur-cursors/src/
+app/assets/cursors/WhiteSur-cursors/dist/cursors_scalable/
+app/assets/cursors/WhiteSur-cursors/build.sh
+app/assets/cursors/WhiteSur-cursors/install.sh
+app/assets/cursors/WhiteSur-cursors/preview.png
+
+# Editor/OS
+.DS_Store

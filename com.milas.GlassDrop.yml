@@ -1,0 +1,37 @@
+app-id: com.milas.GlassDrop
+runtime: org.gnome.Platform
+runtime-version: "47"
+sdk: org.gnome.Sdk
+command: glassdrop
+finish-args:
+  - --share=network
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --device=dri
+  - --filesystem=xdg-download:rw
+  - --filesystem=xdg-videos:rw
+  - --filesystem=xdg-data/icons:ro
+  - --filesystem=~/.icons:ro
+  - --filesystem=/run/host/share/icons:ro
+  - --filesystem=/run/host/user-share/icons:ro
+  - --env=XCURSOR_THEME=WhiteSur-cursors
+  - --env=XCURSOR_SIZE=24
+  - --env=XCURSOR_PATH=/app/share/icons:/run/host/user-share/icons:/run/host/share/icons:/usr/share/icons
+  - --talk-name=org.freedesktop.Flatpak
+modules:
+  - name: glassdrop
+    buildsystem: simple
+    build-commands:
+      - install -Dm755 flatpak/glassdrop.sh /app/bin/glassdrop
+      - install -d /app/share/glassdrop
+      - install -d /app/share/icons
+      - cp -r app /app/share/glassdrop/
+      - install -d /app/share/icons/WhiteSur-cursors/cursors
+      - install -Dm644 app/assets/cursors/WhiteSur-cursors/dist/index.theme /app/share/icons/WhiteSur-cursors/index.theme
+      - cp -r app/assets/cursors/WhiteSur-cursors/dist/cursors/. /app/share/icons/WhiteSur-cursors/cursors/
+      - install -Dm644 com.milas.GlassDrop.desktop /app/share/applications/com.milas.GlassDrop.desktop
+      - install -Dm644 com.milas.GlassDrop.metainfo.xml /app/share/metainfo/com.milas.GlassDrop.metainfo.xml
+      - install -Dm644 app/assets/com.milas.GlassDrop.512.png /app/share/icons/hicolor/512x512/apps/com.milas.GlassDrop.png
+    sources:
+      - type: dir
+        path: .

@@ -1,0 +1,252 @@
+/* ========= THEME TOKENS ========= */
+/* Derived colors so the UI adapts to dynamic theme changes */
+@define-color glass_window_bg @window_bg_color;
+@define-color glass_card_bg @view_bg_color;
+@define-color glass_accent_bg @view_bg_color;
+@define-color glass_accent_border @borders;
+@define-color glass_accent_ring @accent_color;
+@define-color glass_shadow_strong transparent;
+@define-color glass_shadow_soft transparent;
+
+
+/* ========= GLOBAL TYPOGRAPHY ========= */
+
+* {
+    font-family: "Manrope", "Fira Sans", "Cantarell", sans-serif;
+}
+
+/* ========= WINDOW ========= */
+window {
+    background-color: @window_bg_color;
+}
+
+scrolledwindow,
+viewport,
+.content-wrap,
+.queue-list,
+.history-list {
+    background-color: @view_bg_color;
+}
+
+
+/* ========= FROST CARD ========= */
+
+.frost-card {
+    background-color: @view_bg_color;
+    border-radius: 12px;
+    padding: 24px;
+    border: 1px solid @borders;
+    box-shadow: none;
+}
+
+/* ========= CONTENT WRAP ========= */
+
+.content-wrap {
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ========= THUMBNAIL ========= */
+
+.thumb-frame {
+    padding: 6px;
+}
+
+.thumb-preview {
+    border-radius: 18px;
+    opacity: 1;
+    transition: opacity 220ms ease;
+}
+
+.thumb-preview.thumb-loaded {
+    opacity: 1;
+}
+
+.thumb-loading {
+    opacity: 1;
+}
+
+.thumb-skeleton {
+    border-radius: 18px;
+    background: @view_bg_color;
+    background-size: 200% 100%;
+    animation: shimmer 1.4s infinite;
+    border: 1px solid @borders;
+}
+
+@keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+
+/* ========= URL ROW ========= */
+
+.url-row {
+    background: @view_bg_color;
+    border-radius: 12px;
+    padding: 8px 10px;
+    border: 1px solid @borders;
+    box-shadow: none;
+}
+
+/* ========= MENU LOGO ========= */
+
+.logo-menu-button {
+    padding: 6px 8px;
+    border-radius: 18px;
+}
+
+.url-row:focus-within {
+    border: 1px solid @accent_color;
+    box-shadow: none;
+}
+
+/* ========= INPUT ========= */
+
+.glass-input {
+    background: @view_bg_color;
+    border-radius: 20px;
+    padding: 12px 12px;
+    border: none;
+}
+
+.glass-input:focus {
+    box-shadow: none;
+}
+
+/* ========= PRESETS ========= */
+
+.preset-row {
+    margin-top: 6px;
+    margin-bottom: 4px;
+}
+
+/* ========= PASTE BUTTON ========= */
+
+.paste-button {
+    border-radius: 10px;
+    padding: 10px 14px;
+    border: 1px solid @borders;
+    transition: 200ms ease;
+}
+
+.paste-button:hover {
+    background: @view_bg_color;
+}
+
+.paste-button:active {
+    transform: scale(0.98);
+}
+
+
+/* ========= DROPDOWN ========= */
+
+dropdown {
+    border-radius: 20px;
+}
+
+
+/* ========= BUTTON ========= */
+
+.glass-button {
+    border-radius: 10px;
+    padding: 14px 18px;
+    font-weight: 600;
+    border: 1px solid @borders;
+    box-shadow: none;
+
+    transition: 200ms ease;
+}
+
+.glass-button:hover {
+    box-shadow: none;
+}
+
+.glass-button:active {
+    transform: scale(0.98);
+}
+
+.glass-button:disabled {
+    background: @view_bg_color;
+    color: @insensitive_fg_color;
+    box-shadow: none;
+}
+
+/* ========= SPEED ROW ========= */
+
+.speed-row {
+    margin-top: 2px;
+}
+
+/* ========= QUEUE + HISTORY ========= */
+
+.queue-list, .history-list {
+    background: @view_bg_color;
+}
+
+.queue-row, .history-row {
+    background: @view_bg_color;
+    border-radius: 10px;
+    padding: 10px 12px;
+    margin-bottom: 8px;
+    border: 1px solid @borders;
+}
+
+.queue-meta {
+    opacity: 1;
+    font-size: 0.9em;
+}
+
+.queue-status {
+    opacity: 1;
+}
+
+.history-button {
+    border-radius: 10px;
+    padding: 6px 10px;
+    border: 1px solid @borders;
+}
+
+.history-button:hover {
+    background: @view_bg_color;
+}
+
+.history-clear {
+    border-radius: 10px;
+    padding: 6px 10px;
+    border: 1px solid @borders;
+}
+
+.history-clear:hover {
+    background: @view_bg_color;
+}
+
+/* ========= LICENSE ========= */
+
+.license-text {
+    font-family: monospace;
+}
+
+
+/* ========= PROGRESS BAR ========= */
+
+progressbar trough {
+    background: @view_bg_color;
+    border-radius: 14px;
+    border: 1px solid @borders;
+}
+
+progressbar progress {
+    background: @accent_color;
+    border-radius: 14px;
+}
+
+
+/* ========= STATUS ========= */
+
+label {
+    opacity: 1;
+    font-weight: 500;
+}

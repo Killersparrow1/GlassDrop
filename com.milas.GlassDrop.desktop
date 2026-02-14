@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=GlassDrop
+Comment=Download videos with yt-dlp
+Exec=glassdrop
+Icon=com.milas.GlassDrop
+Categories=AudioVideo;Network;
+StartupNotify=true
+Terminal=false
