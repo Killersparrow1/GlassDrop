@@ -2,46 +2,33 @@
   <img src="app/assets/GlassDrop.png" alt="GlassDrop Logo" width="160" />
 </p>
 
-<h1 align="center">GlassDrop</h1>
+# GlassDrop
 
-<p align="center">
-  GTK4/libadwaita desktop downloader powered by <code>yt-dlp</code>.
-  <br />
-  Available as Python app, Flatpak, and AppImage.
-</p>
+GlassDrop is a small GTK app for downloading videos/audio with `yt-dlp`.
+Paste a link, choose a format, and download.
 
-## Features
-- URL paste + auto metadata fetch
-- Resolution/format selection + presets
-- Queue and download history
-- Daily refreshed supported-sites list
-- Donation QR popup, credits, license, and disclaimer dialogs
-- Flatpak packaging (`com.milas.GlassDrop`)
+## What it does
+- Auto fetches title + thumbnail
+- Lets you pick format/resolution or quick presets
+- Shows download progress, queue, and history
+- Works as Python app, Flatpak, or AppImage
 
-## Requirements
-- Linux desktop
+## Quick start (Python)
+Requirements:
+- Linux
 - Python `3.10+`
-- `PyGObject`
 - `yt-dlp`
-
-## Installation (Python)
-Create and activate a virtual environment:
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-```
-
-Install dependencies:
-```bash
-pip install -r requirements.txt
-```
+- `PyGObject` / GTK 4 runtime
 
 Run:
 ```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
 python3 app/main.py
 ```
 
-## Installation (Flatpak)
+## Flatpak
 Build and install:
 ```bash
 flatpak-builder --user --install --force-clean build-dir com.milas.GlassDrop.yml
@@ -52,29 +39,20 @@ Run:
 flatpak run com.milas.GlassDrop
 ```
 
-## Installation (AppImage)
-The repo contains a built AppImage at:
-- `dist/GlassDrop-x86_64.AppImage`
-
-Run:
+## AppImage
+Run the prebuilt file:
 ```bash
 chmod +x dist/GlassDrop-x86_64.AppImage
 ./dist/GlassDrop-x86_64.AppImage
 ```
 
-AppImage runtime check:
-```bash
-./dist/GlassDrop-x86_64.AppImage --appimage-version
-```
+## Download
+Release files:
+- AppImage: `GlassDrop-x86_64.AppImage`
+- Flatpak bundle: `GlassDrop.flatpak`
 
-Rebuild AppImage (if needed):
-```bash
-ARCH=x86_64 /tmp/appimagetool.AppImage dist/GlassDrop.AppDir dist/GlassDrop-x86_64.AppImage
-```
-
-## Repository
-- Homepage: https://github.com/Killersparrow1/GlassDrop
-- Issues: https://github.com/Killersparrow1/GlassDrop/issues
+From Releases:
+`https://github.com/Killersparrow1/GlassDrop/releases`
 
 ## License
 MIT
