@@ -1,6 +1,7 @@
 # GlassDrop
 
 GlassDrop is a GTK4/libadwaita desktop app for downloading media with `yt-dlp`.
+It supports Linux desktop workflows with Python run mode, Flatpak packaging, and AppImage distribution.
 
 ## Features
 - URL paste + auto metadata fetch
@@ -10,23 +11,31 @@ GlassDrop is a GTK4/libadwaita desktop app for downloading media with `yt-dlp`.
 - Donation QR popup, credits, license, and disclaimer dialogs
 - Flatpak packaging (`com.milas.GlassDrop`)
 
-## Run (Python)
-```bash
-python3 app/main.py
-```
-
-Requirements:
-- Python 3
+## Requirements
+- Linux desktop
+- Python `3.10+`
 - `PyGObject`
 - `yt-dlp`
 
-Install deps:
+## Installation (Python)
+Create and activate a virtual environment:
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
-## Run (Flatpak)
-Build + install:
+Run:
+```bash
+python3 app/main.py
+```
+
+## Installation (Flatpak)
+Build and install:
 ```bash
 flatpak-builder --user --install --force-clean build-dir com.milas.GlassDrop.yml
 ```
@@ -36,8 +45,25 @@ Run:
 flatpak run com.milas.GlassDrop
 ```
 
-## AppImage
-Current repo includes AppImage build assets in `dist/`.
+## Installation (AppImage)
+The repo contains a built AppImage at:
+- `dist/GlassDrop-x86_64.AppImage`
+
+Run:
+```bash
+chmod +x dist/GlassDrop-x86_64.AppImage
+./dist/GlassDrop-x86_64.AppImage
+```
+
+AppImage runtime check:
+```bash
+./dist/GlassDrop-x86_64.AppImage --appimage-version
+```
+
+Rebuild AppImage (if needed):
+```bash
+ARCH=x86_64 /tmp/appimagetool.AppImage dist/GlassDrop.AppDir dist/GlassDrop-x86_64.AppImage
+```
 
 ## Repository
 - Homepage: https://github.com/Killersparrow1/GlassDrop
