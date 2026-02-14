@@ -4,7 +4,7 @@
 
 # GlassDrop
 
-GlassDrop is a small GTK app for downloading videos/audio with `yt-dlp`.
+GlassDrop is a Linux GTK4/libadwaita video downloader and audio downloader powered by `yt-dlp`.
 Paste a link, choose a format, and download.
 
 ## What it does
@@ -12,6 +12,13 @@ Paste a link, choose a format, and download.
 - Lets you pick format/resolution or quick presets
 - Shows download progress, queue, and history
 - Works as Python app, Flatpak, or AppImage
+
+## Screenshots
+Python build:
+![GlassDrop Python Screenshot](app/assets/screenshots/GlassDrop%20Python/GlassDrop%20Python.png)
+
+Flatpak build:
+![GlassDrop Flatpak Screenshot](app/assets/screenshots/GlassDrop%20Flatpak/GlassDrop%20Flatpak.png)
 
 ## Quick start (Python)
 Requirements:
@@ -53,6 +60,12 @@ Release files:
 
 From Releases:
 `https://github.com/Killersparrow1/GlassDrop/releases`
+
+## Credits
+- Built by Milas: `https://github.com/Killersparrow1`
+- Download engine: `yt-dlp` (`https://github.com/yt-dlp/yt-dlp`)
+- Development assistance: `Codex` (`https://github.com/openai/codex`)
+- Cursor theme used in Flatpak package: `WhiteSur-cursors`
 
 ## License
 MIT
