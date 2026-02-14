@@ -14,11 +14,17 @@ Paste a link, choose a format, and download.
 - Works as Python app, Flatpak, or AppImage
 
 ## Screenshots
-Python build:
-![GlassDrop Python Screenshot](app/assets/screenshots/GlassDrop%20Python/GlassDrop%20Python.png)
+<details>
+  <summary>Open screenshots (4)</summary>
 
-Flatpak build:
-![GlassDrop Flatpak Screenshot](app/assets/screenshots/GlassDrop%20Flatpak/GlassDrop%20Flatpak.png)
+  <p><strong>Python</strong></p>
+  <img src="app/assets/screenshots/GlassDrop%20Python/GlassDrop%20Python.png" alt="GlassDrop Python Screenshot" />
+  <img src="app/assets/screenshots/GlassDrop%20Python/GlassDrop%20Python%20FS.png" alt="GlassDrop Python Fullscreen Screenshot" />
+
+  <p><strong>Flatpak</strong></p>
+  <img src="app/assets/screenshots/GlassDrop%20Flatpak/GlassDrop%20Flatpak.png" alt="GlassDrop Flatpak Screenshot" />
+  <img src="app/assets/screenshots/GlassDrop%20Flatpak/GlassDrop%20Flatpak%20FS.png" alt="GlassDrop Flatpak Fullscreen Screenshot" />
+</details>
 
 ## Quick start (Python)
 Requirements:
